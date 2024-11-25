@@ -30,7 +30,9 @@ and edit `.env` for the following variables:
 * GEMINI_API_KEY / OPENAI_API_KEY etc
 * BOT_NAME
 
-and make sure to update the password in this line if changed in the `docker-compose.yml` file.
+and make sure to update the password in the URL variable line if changed in other two
+* MONGO_INITDB_ROOT_USERNAME
+* MONGO_INITDB_ROOT_PASSWORD
 * MONGO_DB_URL
 
 ### 3. Run Jakeybot
