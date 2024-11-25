@@ -54,5 +54,5 @@ docker-compose down
 
 Or with podman-compose:
 ```
-podman-compose -f docker-compose down
+podman-compose -f docker-compose.yml down
 ```
