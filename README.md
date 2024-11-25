@@ -1,7 +1,5 @@
 # jakeybot-container-compose
-Docker-compose files for [Jakeybot](https://github.com/zavocc/JakeyBot) chatbot with discord integration.
-
-(podman-compose to follow after testing)
+Docker-compose (or podman-compose) files for [Jakeybot](https://github.com/zavocc/JakeyBot) chatbot with discord integration.
 
 ## Preparation
 
@@ -37,14 +35,24 @@ and make sure to update the password in this line if changed in the `docker-comp
 
 ### 3. Run Jakeybot
 
-Run with
+Run with docker-compose:
 ```
 docker-compose up -d
 ```
 
+Or with podman-compose:
+```
+podman-compose -f docker-compose.yml up -d
+```
+
 ### 4. Stop Jakeybot
 
-Stop with 
+Stop with docker-compose:
 ```
 docker-compose down
+```
+
+Or with podman-compose:
+```
+podman-compose -f docker-compose down
 ```
