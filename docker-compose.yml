@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: jakeybot_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  jakeybot:
+    image: zavocc/jakey:sugilite
+    container_name: jakeybot
+    depends_on:
+      - mongodb
+    env_file:
+      - .env
+    ports:
+      - "2222:2222"
+
+volumes:
+  mongodb_data:
+
